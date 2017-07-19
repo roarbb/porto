@@ -1,11 +1,10 @@
-// import React from 'react'
-import Head from 'next/head'
+import { injectGlobal } from 'styled-components';
+import { Container } from './Container'
+import { InnerContainer } from './InnerContainer'
 
-export default ({ children }) => (
-    <div>
-        <Head>
-            {/* Only reset CSS! */}
-            <style>{`
+injectGlobal`
+@import url('https://fonts.googleapis.com/css?family=Passion+One|Zilla+Slab');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,8 +48,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-            `}</style>
-        </Head>
-        {children}
-    </div>
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+`
+
+export default ({ children }) => (
+	<Container>
+		<InnerContainer>
+			{children}
+		</InnerContainer>
+	</Container>
 )
