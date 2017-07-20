@@ -1,8 +1,12 @@
 import React from 'react'
-import Body from '../components/Body'
+import Body from '../components/molecules/Body'
+import { H1 } from '../components/atoms/H1'
+import PackagesList from '../components/molecules/PackagesList'
 
 export default () => (
     <Body>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolorem tempore ad aut soluta laborum pariatur consequuntur ipsam. Dolore esse nulla harum necessitatibus minus repellat, culpa nam quia provident corrupti!
+        <H1>Status</H1><br/>
+        <b>Platform:</b> Heroku<br /><br/>
+        <b>Dependencies:</b> <PackagesList />
     </Body>
 )

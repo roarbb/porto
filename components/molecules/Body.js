@@ -1,6 +1,6 @@
 import { injectGlobal } from 'styled-components';
-import { Container } from './Container'
-import { InnerContainer } from './InnerContainer'
+import { Container } from '../atoms/Container'
+import { InnerContainer } from '../atoms/InnerContainer'
 
 injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Passion+One|Zilla+Slab');
