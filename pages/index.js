@@ -6,7 +6,7 @@ import PackagesList from '../components/molecules/PackagesList'
 export default () => (
     <Body>
         <H1>Status</H1><br/>
-        <b>Platform:</b> Heroku<br /><br/>
-        <b>Dependencies:</b> <PackagesList />
+        <b>Platform: </b> Heroku<br /><br/>
+        <b>Dependencies: </b> <PackagesList />
     </Body>
 )
