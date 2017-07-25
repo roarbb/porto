@@ -1,6 +1,7 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal, ThemeProvider } from 'styled-components';
 import { Container } from '../atoms/Container'
 import { InnerContainer } from '../atoms/InnerContainer'
+import { theme } from '../atoms/Theme'
 
 injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Passion+One|Zilla+Slab');
@@ -55,9 +56,11 @@ table {
 `
 
 export default ({ children }) => (
-	<Container>
-		<InnerContainer>
-			{children}
-		</InnerContainer>
-	</Container>
+	<ThemeProvider theme={theme}>
+		<Container>
+			<InnerContainer>
+				{children}
+			</InnerContainer>
+		</Container>
+	</ThemeProvider>
 )
